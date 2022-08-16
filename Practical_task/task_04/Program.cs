@@ -1,5 +1,4 @@
 ﻿// 4. Определить, присутствует ли в заданном массиве, некоторое число
-Console.Clear();
 
 void FillArray(int[] array, int min, int max)
 {
@@ -24,6 +23,7 @@ bool FindArray(int[] array, int number)
     return result;
 }
 
+Console.Clear();
 int[] array = new int[10];
 FillArray(array, -100, 100);
 PrintArray(array);
@@ -31,4 +31,3 @@ int number = InputNumber();
 bool result = FindArray(array, number);
 if(result==true) Console.WriteLine($"Число {number} присутствует в данном массиве");
 else Console.WriteLine($"Число {number} отсутствует в данном массиве");
-

@@ -1,5 +1,4 @@
 ﻿// 5. Задать массив, заполнить случайными положительными трёхзначными числами. Показать количество нечетных\четных чисел
-Console.Clear();
 
 void FillArray(int[] array, int min, int max)
 {
@@ -19,6 +18,7 @@ int CountEven(int[] array)
     return count;
 }
 
+Console.Clear();
 int size = 10;
 int[] array = new int[10];
 FillArray(array, 100, 999); 

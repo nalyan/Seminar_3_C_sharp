@@ -1,5 +1,4 @@
-﻿// 3. Написать программу замену элементов массива на противоположные
-Console.Clear();
+﻿// 3. Написать программу замены элементов массива на противоположные
 
 void FillArray (int[] array, int min, int max)
 {
@@ -13,19 +12,15 @@ void PrintArray (int[] array)
     Console.WriteLine();
 }
 
-void ReplaceArray (int[] array)
-{
-    int[] arrayNew = new int[array.Length];
-    for(int i=0; i<array.Length; i++)
-    {
-        arrayNew[i] = -array[i];
-    }
-}
+Console.Clear();
 
 int[] array = new int[10];
-
 FillArray(array, -100, 100);
 PrintArray(array);
 
-PrintArray(ReplaceArray(array));
-//ReplaceArray(array);
+int[] arrayNew = new int[array.Length];
+for(int i=0; i<array.Length; i++)
+  {
+    arrayNew[i] = -array[i];
+  }
+PrintArray(arrayNew);

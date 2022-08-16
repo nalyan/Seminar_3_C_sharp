@@ -1,5 +1,4 @@
 ﻿// 2. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
-Console.Clear();
 
 void FillArray(int[] array, int min, int max)
 {
@@ -36,8 +35,10 @@ int SumNegative (int[] array)
     }
     return resultNegative; 
 }
+
+Console.Clear();
 int[] array = new int[12];
-FillArray(array, -9, 9); // изменил диапазон для того, чтобы считать отрицательные
+FillArray(array, 0, 9); 
 PrintArray(array);
 int resultPositive = SumPositive(array);
 int resultNegative = SumNegative(array);

@@ -1,6 +1,4 @@
 ﻿// 6. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
-Console.Clear();
-
 
 void FillArray(int[] array, int min, int max)
 {
@@ -13,14 +11,19 @@ void PrintArray (int[] array)
     Console.WriteLine();
 }
 
-void FillFind(int[] array, int min)
-{
-    for(int i=0; i<array.Length; i++) array[i] = min++;
-}
+Console.Clear();
 
 int[] array = new int[123];
-int[] findArray = new int[90];
 FillArray(array, 0, 1000);
-FillFind(findArray, 10);
 PrintArray(array);
-PrintArray(findArray);
+int min = 10;
+int max = 99;
+int count = 0;
+for (int i=0; i<array.Length; i++)
+{
+    for (int j = min; j<max+1; j++)
+    {
+        if (j == array[i]) count++;
+    }    
+}
+Console.WriteLine($"В данном массиве {count} элементов из отрезка [{min},{max}]");
